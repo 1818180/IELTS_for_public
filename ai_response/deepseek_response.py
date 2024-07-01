@@ -11,16 +11,18 @@ DS_API_KEY = st.secrets['DEEPSEEK_KRY']
 client = OpenAI(api_key=DS_API_KEY, base_url="https://api.deepseek.com")
 
 def get_ds_1answer(question):
-
-    response = client.chat.completions.create(
-        model="deepseek-chat",
-        messages=[
-            {"role": "assistant", "content": "一个非常专业的雅思老师"},
-            {"role": "user", "content": question},
-        ],
-        stream=False
-    )
-    return response.choices[0].message.content
+    try:
+        response = client.chat.completions.create(
+            model="deepseek-chat",
+            messages=[
+                {"role": "assistant", "content": "一个非常专业的雅思老师"},
+                {"role": "user", "content": question},
+            ],
+            stream=False
+        )
+        return response.choices[0].message.content
+    except openai.error.APIConnectionError as e:
+        return None
 
 
 if __name__ == "__main__":
