@@ -3,15 +3,15 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import os
 
-load_dotenv(dotenv_path='.env.local')
+# load_dotenv(dotenv_path='.env.local')
 
-http_proxy = os.getenv('HTTP_PROXY')
-https_proxy = os.getenv('HTTPS_PROXY')
-API_KEY = os.getenv('API_KEY')
+# http_proxy = os.getenv('HTTP_PROXY')
+# https_proxy = os.getenv('HTTPS_PROXY')
+# API_KEY = os.getenv('API_KEY')
 
-# http_proxy = st.secrets['HTTP_PROXY']
-# https_proxy = st.secrets['HTTPS_PROXY']
-# API_KEY = st.secrets['API_KEY']
+http_proxy = st.secrets['HTTP_PROXY']
+https_proxy = st.secrets['HTTPS_PROXY']
+API_KEY = st.secrets['API_KEY']
 
 genai.configure(api_key=API_KEY)
 
