@@ -3,7 +3,7 @@ import ast
 import json
 import pandas as pd
 from nltk import sent_tokenize
-nltk.data.path.append('./nltk_data')
+nltk.data.path.append('./assets/nltk_data')
 from snownlp import SnowNLP
 from spellchecker import SpellChecker
 from textblob import TextBlob
