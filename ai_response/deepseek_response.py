@@ -22,7 +22,7 @@ def get_ds_1answer(question):
             stream=False
         )
         return response.choices[0].message.content
-    except openai.error.APIConnectionError:
+    except openai.APIConnectionError:
         return None
 
 
