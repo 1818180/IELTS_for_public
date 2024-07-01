@@ -122,7 +122,10 @@ def only_essay(model, request):
     writing = st.session_state.writing
     question = AIforWriting.part2_only_essay(topic, writing, request)
     answer = AIforWriting.submit_question_to_AI(question, model)
-    update_essay(model=model, essay_new=answer)
+    if answer:
+        update_essay(model=model, essay_new=answer)
+    else:
+        warning("AI 链接出问题啦！")
 
 def score_essay(model, request):
     if model:
