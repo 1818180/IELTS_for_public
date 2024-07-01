@@ -2,6 +2,7 @@ import re
 import ast
 import json
 import pandas as pd
+import nltk
 from nltk.tokenize import sent_tokenize
 nltk.download('punkt')
 from snownlp import SnowNLP
