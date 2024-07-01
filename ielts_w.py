@@ -11,8 +11,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",                                                                                                      
     menu_items={
-        'Get Help': 'https://github.com/1818180/IELTS_writing_helper',
-        'Report a bug': "https://github.com/1818180/IELTS_writing_helper",
+        'Get Help': 'https://github.com/1818180/IELTS_for_public',
+        'Report a bug': "https://github.com/1818180/IELTS_for_public",
         'About': "# This is my *first* Web APP! Hope it's helpful to you!"
     }
 )
@@ -100,7 +100,7 @@ with st.sidebar:
     st.caption("After completing the study, all relevant content can be exported in JSON format ")
     bu_save_essay = st.button("📍 Export all content ", type='primary',use_container_width=True,on_click=lambda :export_content())
     st.divider()
-    st.page_link("https://github.com/1818180/IELTS_writing_helper", label="My Github", icon="👩")
+    st.page_link("https://github.com/1818180/IELTS_for_public", label="My Github", icon="👩")
 
 def word_lengths():
     text = st.session_state['writing']
