@@ -2,6 +2,7 @@ import re
 import ast
 import json
 import pandas as pd
+import nltk
 from nltk import sent_tokenize
 nltk.data.path.append('./assets/nltk_data')
 from snownlp import SnowNLP
