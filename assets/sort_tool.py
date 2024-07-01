@@ -2,8 +2,6 @@ import re
 import ast
 import json
 import pandas as pd
-import nltk
-nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 from snownlp import SnowNLP
 from spellchecker import SpellChecker
