@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import hydralit_components as hc
-
 from assets.prompt import AIforWriting, AImodel
 from assets.sort_tool import SortingTXT, StyleTXT
 from chart.df_template import DFtemplates
