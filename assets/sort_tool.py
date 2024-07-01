@@ -3,6 +3,7 @@ import ast
 import json
 import pandas as pd
 from nltk.tokenize import sent_tokenize
+nltk.download('punkt')
 from snownlp import SnowNLP
 from spellchecker import SpellChecker
 from textblob import TextBlob
