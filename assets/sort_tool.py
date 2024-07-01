@@ -3,13 +3,13 @@ import ast
 import json
 import pandas as pd
 import nltk
-from nltk.tokenize import sent_tokenize
 nltk.download('punkt')
+from nltk.tokenize import sent_tokenize
 from snownlp import SnowNLP
 from spellchecker import SpellChecker
 from textblob import TextBlob
-# 便于筛取AI回答中的有用信息
 
+# 便于筛取AI回答中的有用信息
 class SortingTXT:
 
     @staticmethod
@@ -49,12 +49,6 @@ class SortingTXT:
         sentences = sent_tokenize(tt)
         return sentences
         # sentences = [ s1, s2 ]
-
-    # 中文断句
-    def find_s_in_txt_ch(tt: str):
-        s = SnowNLP(tt)
-        sentences = s.sentences
-        return sentences
 
     @staticmethod
     def find_lists_in_txt(txt: str):
