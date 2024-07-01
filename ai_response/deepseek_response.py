@@ -3,10 +3,10 @@ from dotenv import load_dotenv
 import streamlit as st
 import os
 
-load_dotenv(dotenv_path='.env.local')
-DS_API_KEY = os.getenv('DEEPSEEK_KRY')
+# load_dotenv(dotenv_path='.env.local')
+# DS_API_KEY = os.getenv('DEEPSEEK_KRY')
 
-# DS_API_KEY = st.secrets['DEEPSEEK_KRY']
+DS_API_KEY = st.secrets['DEEPSEEK_KRY']
 
 client = OpenAI(api_key=DS_API_KEY, base_url="https://api.deepseek.com")
 
