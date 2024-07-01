@@ -2,7 +2,7 @@ import re
 import ast
 import json
 import pandas as pd
-from nltk.tokenize import sent_tokenize
+from nltk import sent_tokenize
 from snownlp import SnowNLP
 from spellchecker import SpellChecker
 from textblob import TextBlob
