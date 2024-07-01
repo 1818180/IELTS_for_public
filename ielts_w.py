@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-import nltk
-nltk.download('punkt')
-
 from assets.prompt import AIforWriting, AImodel
 from assets.sort_tool import SortingTXT, StyleTXT
 from chart.df_template import DFtemplates
